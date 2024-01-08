@@ -1,11 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Anchor } from '~/components/anchor';
+import { createMetadata } from '~/utils/create-metadata';
+
+export const metadata = createMetadata({
+  path: '',
+  title: 'Creed: Apollo fia',
+  description:
+    'A Creed: Apollo fia 2015-ös amerikai sport-dráma, melyet Ryan Coogler rendezett, illetve a forgatókönyvét is ő írta, Aaron Covingtonnal közösen. A Rocky-sorozat folytatásaként és spin-off-jaként elkészült film szereplője Michael B. Jordan, Sylvester Stallone, Tessa Thompson, Phylicia Rashad, Tony Bellew, és Graham McTavish.',
+});
 
 const Page: React.FC = () => (
   <main>
     <header className="grid min-h-96 place-content-center overflow-hidden bg-[url(/banner.jpg)] bg-cover bg-center bg-no-repeat px-6">
-      <h2 className="text-center text-6xl font-bold text-white">Creed: Apollo Fia</h2>
+      <h1 className="text-center text-6xl font-bold text-white">Creed: Apollo Fia</h1>
     </header>
 
     <article className="content">

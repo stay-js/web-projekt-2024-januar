@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { useState } from 'react';
 import { cn } from '~/utils/cn';
 import { navItems } from '~/constants/nav-items';
@@ -27,7 +28,9 @@ export const Navigation: React.FC = () => {
 
   return (
     <nav className="flex w-full select-none items-center justify-between px-6 py-4">
-      <h1 className="text-2xl font-bold">Creed</h1>
+      <Link href="/" className="text-2xl font-bold">
+        Creed
+      </Link>
 
       <button
         className="z-10 h-6 w-6 lg:hidden"
