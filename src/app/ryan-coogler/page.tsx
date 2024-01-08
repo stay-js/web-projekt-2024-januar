@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Anchor } from '~/components/anchor';
+import { ryanCooglerMovies } from '~/constants/ryan-coogler-movies';
 import { createMetadata } from '~/utils/create-metadata';
 
 export const metadata = createMetadata({
@@ -20,7 +21,7 @@ const Page: React.FC = () => (
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Élete</h2>
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_4fr]">
+        <div className="grid gap-6 md:grid-cols-[1fr_4fr]">
           <Image
             className="rounded-lg"
             src="/ryan-coogler.jpg"
@@ -35,7 +36,7 @@ const Page: React.FC = () => (
             </p>
             <p>
               Első nagyjátékfilmje,{' '}
-              <Anchor href="https://www.imdb.com/title/tt2334649/" target="_blank">
+              <Anchor href="https://www.imdb.com/title/tt2334649" target="_blank">
                 A megálló (2013)
               </Anchor>{' '}
               kritikai sikert aratott a 2013-as{' '}
@@ -46,7 +47,7 @@ const Page: React.FC = () => (
                 Sundance Filmfesztiválon
               </Anchor>
               . 2015-ben társ-forgatókönyvíróként és rendezőként vett részt a hetedik Rocky-film, a{' '}
-              <Anchor href="https://www.imdb.com/title/tt3076658/" target="_blank">
+              <Anchor href="https://www.imdb.com/title/tt3076658" target="_blank">
                 Creed: Apollo fia
               </Anchor>{' '}
               című filmdráma elkészítésében. 2018-ban megrendezte a{' '}
@@ -54,7 +55,7 @@ const Page: React.FC = () => (
                 Marvel-moziuniverzumban
               </Anchor>{' '}
               játszódó{' '}
-              <Anchor href="https://www.imdb.com/title/tt1825683/" target="_blank">
+              <Anchor href="https://www.imdb.com/title/tt1825683" target="_blank">
                 Fekete Párduc
               </Anchor>{' '}
               című szuperhősfilmet, mely az amerikai filmtörténelem harmadik legnagyobb jegyeladási
@@ -69,11 +70,11 @@ const Page: React.FC = () => (
             </p>
             <p>
               Rendszeresen dolgozik együtt{' '}
-              <Anchor href="https://www.imdb.com/name/nm0000230/" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm0000230" target="_blank">
                 Michael B. Jordan
               </Anchor>{' '}
               színésszel és{' '}
-              <Anchor href="https://www.imdb.com/name/nm3234869/" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm3234869" target="_blank">
                 Ludwig Göransson
               </Anchor>{' '}
               zeneszerzővel. Mindketten közreműködtek Coogler eddigi összes filmjében.
@@ -99,118 +100,19 @@ const Page: React.FC = () => (
 
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Filmei</h2>
+
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt2334649/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/a-megallo.jpg"
-                alt="A megálló"
-                width={1600}
-                height={900}
-              />
-            </Link>
+          {ryanCooglerMovies.map(({ img, imdb, title, year }) => (
+            <div className="flex flex-col gap-3" key={imdb}>
+              <Link href={imdb} target="_blank" rel="noopener noreferrer">
+                <Image className="rounded-lg" src={img} alt={title} width={1280} height={720} />
+              </Link>
 
-            <span className="text-lg font-semibold">A megálló (2013)</span>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt3076658/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/creed.jpg"
-                alt="Creed"
-                width={1920}
-                height={1080}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Creed (2015)</span>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt6343314/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/creed-2.jpg"
-                alt="Creed II."
-                width={1920}
-                height={1080}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Creed II. (2018)</span>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt1825683/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/black-panther.jpg"
-                alt="Fekete Párduc"
-                width={1200}
-                height={675}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Fekete Párduc (2018)</span>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt9784798/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/judas-es-a-fekete-messias.jpg"
-                alt="Júdás és a Fekete Messiás"
-                width={1707}
-                height={960}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Júdás és a Fekete Messiás (2021)</span>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt3554046/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/space-jam-2.jpg"
-                alt="Space Jam 2."
-                width={1920}
-                height={1080}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Space Jam 2. (2021)</span>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt9114286/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/black-panther-2.jpg"
-                alt="Fekete Párduc"
-                width={1280}
-                height={720}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Fekete Párduc 2. (2022)</span>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt11145118/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/creed-3.jpg"
-                alt="Creed III."
-                width={1920}
-                height={1080}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Creed III. (2023)</span>
-          </div>
+              <span className="text-lg font-semibold">
+                {title} ({year})
+              </span>
+            </div>
+          ))}
         </div>
       </section>
     </article>

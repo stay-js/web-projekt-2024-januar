@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Anchor } from '~/components/anchor';
+import { cast, movies } from '~/constants/creed';
 import { createMetadata } from '~/utils/create-metadata';
 
 export const metadata = createMetadata({
@@ -109,102 +110,35 @@ const Page: React.FC = () => (
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Szereplők</h2>
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/name/nm0430107/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/michael-b-jordan.jpg"
-                alt="Michael B. Jordan"
-                width={1920}
-                height={1228}
-              />
-            </Link>
+          {cast.map(({ img, imdb, name, role }) => (
+            <div className="flex flex-col gap-3" key={imdb}>
+              <Link href={imdb} target="_blank" rel="noopener noreferrer">
+                <Image className="rounded-lg" src={img} alt={name} width={1920} height={1228} />
+              </Link>
 
-            <div className="flex flex-col">
-              <span className="text-lg font-semibold">Michael B. Jordan</span>
-              <span className="text-neutral-700">Adonis Creed</span>
+              <div className="flex flex-col">
+                <span className="text-lg font-semibold">{name}</span>
+                <span className="text-neutral-700">{role}</span>
+              </div>
             </div>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/name/nm0000230/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/sylvester-stallone.jpg"
-                alt="Sylvester Stallone"
-                width={1920}
-                height={1228}
-              />
-            </Link>
-
-            <div className="flex flex-col">
-              <span className="text-lg font-semibold">Sylvester Stallone</span>
-              <span className="text-neutral-700">Rocky Balboa</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/name/nm1935086/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/tessa-thompson.jpg"
-                alt="Tessa Thompson"
-                width={1920}
-                height={1228}
-              />
-            </Link>
-
-            <div className="flex flex-col">
-              <span className="text-lg font-semibold">Tessa Thompson</span>
-              <span className="text-neutral-700">Bianca Taylor</span>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Filmográfia</h2>
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt3076658/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/creed.jpg"
-                alt="Creed"
-                width={1920}
-                height={1080}
-              />
-            </Link>
+          {movies.map(({ img, imdb, title, year }) => (
+            <div className="flex flex-col gap-3" key={imdb}>
+              <Link href={imdb} target="_blank" rel="noopener noreferrer">
+                <Image className="rounded-lg" src={img} alt={title} width={1280} height={720} />
+              </Link>
 
-            <span className="text-lg font-semibold">Creed (2015)</span>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt6343314/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/creed-2.jpg"
-                alt="Creed II."
-                width={1920}
-                height={1080}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Creed II. (2018)</span>
-          </div>
-          <div className="flex flex-col gap-3">
-            <Link href="https://www.imdb.com/title/tt11145118/" target="_blank">
-              <Image
-                className="rounded-lg"
-                src="/creed-3.jpg"
-                alt="Creed III."
-                width={1920}
-                height={1080}
-              />
-            </Link>
-
-            <span className="text-lg font-semibold">Creed III. (2023)</span>
-          </div>
+              <span className="text-lg font-semibold">
+                {title} ({year})
+              </span>
+            </div>
+          ))}
         </div>
       </section>
     </article>
