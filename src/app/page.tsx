@@ -141,6 +141,30 @@ const Page: React.FC = () => (
           ))}
         </div>
       </section>
+
+      <section className="flex w-full flex-col gap-2">
+        <h2 className="text-2xl font-bold">Források</h2>
+
+        <ul className="list-inside list-disc pl-2">
+          <li>
+            Creed:{' '}
+            <Anchor href="https://hu.wikipedia.org/wiki/Creed:_Apollo_fia" target="_blank">
+              Wikipedia
+            </Anchor>
+          </li>
+          <li>
+            Ryan Coogler:{' '}
+            <Anchor href="https://hu.wikipedia.org/wiki/Ryan_Coogler" target="_blank">
+              Wikipedia
+            </Anchor>
+          </li>
+          <li>
+            <Anchor href="https://imdb.com" target="_blank">
+              IMDB
+            </Anchor>
+          </li>
+        </ul>
+      </section>
     </article>
   </main>
 );
