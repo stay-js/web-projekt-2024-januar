@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next';
 
-const routes = ['', '/contact', '/resume', '/setup'];
+const routes = ['', '/ryan-coogler'];
 
 const sitemap = (): MetadataRoute.Sitemap => {
   return routes.map((route) => ({
-    url: `https://znagy.hu${route}`,
+    url: `https://web-januar.znagy.hu${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }));
 };

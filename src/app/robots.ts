@@ -7,8 +7,8 @@ const robots = (): MetadataRoute.Robots => ({
       allow: '/',
     },
   ],
-  host: 'https://znagy.hu',
-  sitemap: 'https://znagy.hu/sitemap.xml',
+  host: 'https://web-januar.znagy.hu',
+  sitemap: 'https://web-januar.znagy.hu/sitemap.xml',
 });
 
 export default robots;

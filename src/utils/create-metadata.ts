@@ -1,26 +1,50 @@
 import type { Metadata } from 'next';
+
 export const createMetadata = ({
   path,
   title,
-  absoluteTitle,
   description,
 }: {
   path: string;
   title: string;
-  absoluteTitle?: string;
   description: string;
 }): Metadata => ({
-  metadataBase: new URL('https://znagy.hu'),
+  metadataBase: new URL('https://web-januar.znagy.hu'),
 
   authors: [{ name: 'Zétény Nagy', url: 'https://znagy.hu' }],
   creator: 'Zétény Nagy',
 
-  keywords: ['Creed'],
+  keywords: [
+    'creed',
+    'creed-2',
+    'creed-3',
+    'creed II',
+    'creed II',
+    'michael b. jordan',
+    'sylvester stallone',
+    'ryan coogler',
+    'tessa thompson',
+    'dolph lundgren',
+    'florian munteanu',
+    'david callaham',
+    'steven caple jr.',
+    'steven caple',
+    'black panther',
+    'black-panther',
+    'blackpanther',
+    'marvel',
+    'marvel cinematic universe',
+    'web',
+    'projekt',
+    '2024',
+    'web projekt 2024',
+    'webprojekt2024',
+  ],
 
-  title: absoluteTitle ?? `${title} - Zétény Nagy`,
+  title: `${title} - Web Projekt 2024`,
   description,
 
-  applicationName: 'Zétény Nagy',
+  applicationName: 'Web Projekt 2024',
 
   robots: {
     index: true,
@@ -37,19 +61,15 @@ export const createMetadata = ({
   openGraph: {
     type: 'website',
     url: `https://znagy.hu${path}`,
-    title: absoluteTitle ?? `${title} - Zétény Nagy`,
+    title: `${title} - Web Projekt 2024`,
     description,
-    siteName: 'Zétény Nagy',
-    locale: 'en-US',
+    siteName: 'Web Projekt 2024',
+    locale: 'hu_HU',
   },
 
   twitter: {
     card: 'summary',
-    title: absoluteTitle ?? `${title} - Zétény Nagy`,
+    title: `${title} - Web Projekt 2024`,
     description,
-  },
-
-  icons: {
-    icon: '/favicon.ico',
   },
 });
