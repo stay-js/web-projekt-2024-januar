@@ -26,31 +26,31 @@ const Page: React.FC = () => (
               A <b>Creed: Apollo fia</b> (eredeti cím: <i>Creed</i>) 2015-ös amerikai sport-dráma,
               melyet <Anchor href="/ryan-coogler">Ryan Coogler</Anchor> rendezett, illetve a
               forgatókönyvét is ő írta, Aaron Covingtonnal közösen. A{' '}
-              <Anchor href="https://www.imdb.com/list/ls020255449/" target="_blank">
+              <Anchor href="https://www.imdb.com/list/ls020255449" target="_blank">
                 Rocky-sorozat
               </Anchor>{' '}
               folytatásaként és spin-off-jaként elkészült film szereplője{' '}
-              <Anchor href="https://www.imdb.com/name/nm0430107/" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm0430107" target="_blank">
                 Michael B. Jordan
               </Anchor>
               ,{' '}
-              <Anchor href="https://www.imdb.com/name/nm0000230/" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm0000230" target="_blank">
                 Sylvester Stallone
               </Anchor>
               ,{' '}
-              <Anchor href="https://www.imdb.com/name/nm1935086/" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm1935086" target="_blank">
                 Tessa Thompson
               </Anchor>
               ,{' '}
-              <Anchor href="https://www.imdb.com/name/nm0711118/" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm0711118" target="_blank">
                 Phylicia Rashad
               </Anchor>
               ,{' '}
-              <Anchor href="https://www.imdb.com/name/nm6905689/" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm6905689" target="_blank">
                 Tony Bellew
               </Anchor>
               , és{' '}
-              <Anchor href="https://www.imdb.com/name/nm0574615/" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm0574615" target="_blank">
                 Graham McTavish
               </Anchor>
               .
@@ -66,7 +66,7 @@ const Page: React.FC = () => (
             </p>
             <p>
               A Rocky-sorozat hetedik részeként és a{' '}
-              <Anchor href="https://www.imdb.com/title/tt0479143/" target="_blank">
+              <Anchor href="https://www.imdb.com/title/tt0479143" target="_blank">
                 Rocky Balboa
               </Anchor>{' '}
               folytatásaként a Creed pozitív értékeléseket kapott a kritikusoktól, akik a sorozat
