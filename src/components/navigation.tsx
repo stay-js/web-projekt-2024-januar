@@ -64,12 +64,12 @@ export const Navigation: React.FC = () => {
           !isToggled && 'hidden',
         )}
       >
-        <ul className="flex h-screen w-8/12 flex-col gap-6 bg-white px-6 pt-32 lg:h-fit lg:w-fit lg:flex-row lg:gap-2 lg:p-0">
+        <ul className="flex h-screen w-9/12 flex-col gap-6 bg-white px-6 pt-32 lg:h-fit lg:w-fit lg:flex-row lg:gap-0 lg:p-0">
           {navItems.map(({ name, path }) => (
             <li key={path}>
               <a
                 className={cn(
-                  'text-xl text-neutral-900 transition-colors lg:rounded-md lg:px-3 lg:py-2 lg:text-base lg:font-semibold lg:after:hidden lg:hover:bg-neutral-300',
+                  'text-lg text-neutral-900 transition-colors hover:text-neutral-500 lg:rounded-md lg:px-3 lg:py-2 lg:text-base lg:font-semibold lg:after:hidden lg:hover:bg-neutral-300 lg:hover:text-neutral-800',
                   path !== pathname && 'lg:text-neutral-600',
                 )}
                 onClick={handleClose}
