@@ -24,7 +24,7 @@ export const List: React.FC<{ items: Cast[] | Movie[] }> = ({ items }) => (
         <div className="flex flex-col gap-3" key={item.imdb}>
           <Link href={item.imdb} target="_blank" rel="noopener noreferrer">
             <Image
-              className="rounded-lg transition-opacity hover:opacity-75"
+              className="rounded-lg shadow transition-opacity hover:opacity-75"
               src={item.img}
               alt={isMovie ? item.title : item.name}
               width={1280}

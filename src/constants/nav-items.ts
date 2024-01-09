@@ -4,7 +4,7 @@ export const navItems = [
     path: '/',
   },
   {
-    name: 'Ryan Coogler munkássága',
+    name: 'Ryan Coogler',
     path: '/ryan-coogler',
   },
 ] as const;
