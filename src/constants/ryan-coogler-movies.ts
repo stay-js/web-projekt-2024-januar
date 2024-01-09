@@ -1,23 +1,13 @@
-import type { Movie } from '~/components/movies';
+import type { Movie } from '~/components/list';
+import { movies as creedMovies } from './creed';
 
-export const ryanCooglerMovies: Movie[] = [
+export const movies: Movie[] = [
+  ...creedMovies,
   {
     img: '/a-megallo.jpg',
     imdb: 'https://www.imdb.com/title/tt2334649',
     title: 'A megálló',
     year: 2013,
-  },
-  {
-    img: '/creed.jpg',
-    imdb: 'https://www.imdb.com/title/tt3076658',
-    title: 'Creed',
-    year: 2015,
-  },
-  {
-    img: '/creed-2.jpg',
-    imdb: 'https://www.imdb.com/title/tt6343314',
-    title: 'Creed II.',
-    year: 2018,
   },
   {
     img: '/black-panther.jpg',
@@ -43,10 +33,4 @@ export const ryanCooglerMovies: Movie[] = [
     title: 'Fekete Párduc 2.',
     year: 2022,
   },
-  {
-    img: '/creed-3.jpg',
-    imdb: 'https://www.imdb.com/title/tt11145118',
-    title: 'Creed III.',
-    year: 2023,
-  },
-];
+].sort((a, b) => a.year - b.year);

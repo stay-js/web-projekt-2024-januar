@@ -1,7 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import { Anchor } from '~/components/anchor';
-import { Movies } from '~/components/movies';
+import { List } from '~/components/list';
 import { cast, movies } from '~/constants/creed';
 import { createMetadata } from '~/utils/create-metadata';
 
@@ -110,32 +108,12 @@ const Page: React.FC = () => (
 
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Szereplők</h2>
-
-        <div className="grid gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-          {cast.map(({ img, imdb, name, role }) => (
-            <div className="flex flex-col gap-3" key={imdb}>
-              <Link href={imdb} target="_blank" rel="noopener noreferrer">
-                <Image
-                  className="rounded-lg transition-opacity hover:opacity-75"
-                  src={img}
-                  alt={name}
-                  width={1920}
-                  height={1228}
-                />
-              </Link>
-
-              <div className="flex flex-col">
-                <span className="text-lg font-semibold">{name}</span>
-                <span className="text-neutral-700">{role}</span>
-              </div>
-            </div>
-          ))}
-        </div>
+        <List items={cast} />
       </section>
 
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Filmográfia</h2>
-        <Movies movies={movies} />
+        <List items={movies} />
       </section>
 
       <section className="flex w-full flex-col gap-2">

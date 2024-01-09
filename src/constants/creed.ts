@@ -1,4 +1,4 @@
-import type { Movie } from '~/components/movies';
+import type { Cast, Movie } from '~/components/list';
 
 export const movies: Movie[] = [
   {
@@ -21,7 +21,7 @@ export const movies: Movie[] = [
   },
 ];
 
-export const cast = [
+export const cast: Cast[] = [
   {
     img: '/michael-b-jordan.jpg',
     imdb: 'https://www.imdb.com/name/nm0430107',
@@ -40,4 +40,4 @@ export const cast = [
     name: 'Michael B. Jordan',
     role: 'Bianca Taylor',
   },
-] as const;
+];

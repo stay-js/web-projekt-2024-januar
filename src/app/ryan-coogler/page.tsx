@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Anchor } from '~/components/anchor';
-import { Movies } from '~/components/movies';
-import { ryanCooglerMovies } from '~/constants/ryan-coogler-movies';
+import { List } from '~/components/list';
+import { movies } from '~/constants/ryan-coogler-movies';
 import { createMetadata } from '~/utils/create-metadata';
 
 export const metadata = createMetadata({
@@ -100,7 +100,7 @@ const Page: React.FC = () => (
 
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Filmei</h2>
-        <Movies movies={ryanCooglerMovies} />
+        <List items={movies} />
       </section>
     </article>
   </main>
