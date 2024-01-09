@@ -57,8 +57,8 @@ const Page: React.FC = () => (
           <Image
             src="/creed-banner.jpg"
             className="hidden w-60 lg:block"
-            width={1920}
-            height={2560}
+            width={720}
+            height={960}
             alt="Creed Banner"
           />
 
