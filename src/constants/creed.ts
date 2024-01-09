@@ -36,8 +36,8 @@ export const cast: Cast[] = [
   },
   {
     img: '/tessa-thompson.jpg',
-    imdb: 'Tessa Thompson',
-    name: 'Michael B. Jordan',
+    imdb: 'https://www.imdb.com/name/nm1935086',
+    name: 'Tessa Thompson',
     role: 'Bianca Taylor',
   },
   {

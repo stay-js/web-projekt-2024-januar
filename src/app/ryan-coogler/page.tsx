@@ -70,7 +70,7 @@ const Page: React.FC = () => (
             </p>
             <p>
               Rendszeresen dolgozik együtt{' '}
-              <Anchor href="https://www.imdb.com/name/nm0000230" target="_blank">
+              <Anchor href="https://www.imdb.com/name/nm0430107" target="_blank">
                 Michael B. Jordan
               </Anchor>{' '}
               színésszel és{' '}
