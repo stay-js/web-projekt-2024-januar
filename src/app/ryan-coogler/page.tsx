@@ -32,8 +32,11 @@ const Page: React.FC = () => (
 
           <div className="flex flex-col gap-2 text-justify">
             <p>
-              <b>Ryan Kyle Coogler</b> (Oakland, Kalifornia, 1986. május 23. -) amerikai
-              filmrendező, filmproducer és forgatókönyvíró.
+              <Anchor href="https://www.imdb.com/name/nm3363032" target="_blank">
+                Ryan Kyle Coogler
+              </Anchor>{' '}
+              (Oakland, Kalifornia, 1986. május 23. -) amerikai filmrendező, filmproducer és
+              forgatókönyvíró.
             </p>
             <p>
               Első nagyjátékfilmje,{' '}
