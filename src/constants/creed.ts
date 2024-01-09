@@ -40,4 +40,34 @@ export const cast: Cast[] = [
     name: 'Michael B. Jordan',
     role: 'Bianca Taylor',
   },
+  {
+    img: '/tony-bellew.jpg',
+    imdb: 'https://www.imdb.com/name/nm6905689',
+    name: 'Tony Bellew',
+    role: 'Ricky Conlan',
+  },
+  {
+    img: '/phylicia-rashad.jpg',
+    imdb: 'https://www.imdb.com/name/nm0711118',
+    name: 'Phylicia Rashad',
+    role: 'Mary Anne Creed',
+  },
+  {
+    img: '/wood-harris.jpg',
+    imdb: 'https://www.imdb.com/name/nm0365445',
+    name: 'Wood Harris',
+    role: 'Tony Evers',
+  },
+  {
+    img: '/andre-ward.jpg',
+    imdb: 'https://www.imdb.com/name/nm3188266',
+    name: 'Andre Ward',
+    role: 'Danny Wheeler',
+  },
+  {
+    img: '/gabe-rosado.jpg',
+    imdb: 'https://www.imdb.com/name/nm5137202',
+    name: 'Gabe Rosado',
+    role: "Leo 'The Lion' Sporino",
+  },
 ];
