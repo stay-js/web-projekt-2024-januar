@@ -19,7 +19,7 @@ const Page: React.FC = () => (
     <article className="content">
       <section className="flex flex-col gap-3">
         <h2 className="text-2xl font-bold md:text-3xl">A filmről</h2>
-        <div className="grid gap-6 lg:grid-cols-[3fr_2fr]">
+        <div className="grid gap-6 xl:grid-cols-[3fr_2fr]">
           <div className="flex flex-col gap-2 text-justify">
             <p>
               A <b>Creed: Apollo fia</b> (eredeti cím: <i>Creed</i>) 2015-ös amerikai sport-dráma,
@@ -102,7 +102,7 @@ const Page: React.FC = () => (
             title="Creed: Apollo fia (Előzetes)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>
+          />
         </div>
       </section>
 

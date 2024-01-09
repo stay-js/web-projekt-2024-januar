@@ -21,14 +21,15 @@ const Page: React.FC = () => (
       <section className="flex flex-col gap-3">
         <h2 className="text-2xl font-bold md:text-3xl">Élete</h2>
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_4fr]">
+        <div className="grid gap-6 lg:grid-cols-[4fr_1fr]">
           <Image
-            className="mx-auto w-full rounded-lg sm:w-1/2 lg:w-full"
+            className="mx-auto w-full rounded-lg sm:w-1/2 lg:order-2 lg:w-full"
             src="/ryan-coogler.jpg"
             alt="Ryan Coogler"
             width={791}
             height={1024}
           />
+
           <div className="flex flex-col gap-2 text-justify">
             <p>
               <b>Ryan Kyle Coogler</b> (Oakland, Kalifornia, 1986. május 23. -) amerikai
