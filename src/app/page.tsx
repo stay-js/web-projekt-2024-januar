@@ -57,7 +57,7 @@ const Page: React.FC = () => (
         <div className="flex w-full flex-col gap-4 lg:flex-row">
           <Image
             src="/creed-banner.jpg"
-            className="hidden w-60 lg:block"
+            className="hidden max-w-60 lg:block"
             width={720}
             height={960}
             alt="Creed Banner"
