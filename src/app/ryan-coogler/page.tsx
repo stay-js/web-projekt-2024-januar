@@ -30,7 +30,7 @@ const Page: React.FC = () => (
             height={1024}
           />
 
-          <div className="flex flex-col gap-2 text-justify">
+          <div className="flex flex-col gap-2 hyphens-auto">
             <p>
               <Anchor href="https://www.imdb.com/name/nm3363032" target="_blank">
                 Ryan Kyle Coogler
