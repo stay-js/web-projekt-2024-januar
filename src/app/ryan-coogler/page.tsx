@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Anchor } from '~/components/anchor';
+import { Movies } from '~/components/movies';
 import { ryanCooglerMovies } from '~/constants/ryan-coogler-movies';
 import { createMetadata } from '~/utils/create-metadata';
 
@@ -100,20 +100,7 @@ const Page: React.FC = () => (
 
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Filmei</h2>
-
-        <div className="grid gap-4 md:grid-cols-3">
-          {ryanCooglerMovies.map(({ img, imdb, title, year }) => (
-            <div className="flex flex-col gap-3" key={imdb}>
-              <Link href={imdb} target="_blank" rel="noopener noreferrer">
-                <Image className="rounded-lg" src={img} alt={title} width={1280} height={720} />
-              </Link>
-
-              <span className="text-lg font-semibold">
-                {title} ({year})
-              </span>
-            </div>
-          ))}
-        </div>
+        <Movies movies={ryanCooglerMovies} />
       </section>
     </article>
   </main>

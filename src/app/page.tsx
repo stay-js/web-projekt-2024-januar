@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Anchor } from '~/components/anchor';
+import { Movies } from '~/components/movies';
 import { cast, movies } from '~/constants/creed';
 import { createMetadata } from '~/utils/create-metadata';
 
@@ -109,11 +110,18 @@ const Page: React.FC = () => (
 
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Szereplők</h2>
-        <div className="grid gap-4 md:grid-cols-3">
+
+        <div className="grid gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {cast.map(({ img, imdb, name, role }) => (
             <div className="flex flex-col gap-3" key={imdb}>
               <Link href={imdb} target="_blank" rel="noopener noreferrer">
-                <Image className="rounded-lg" src={img} alt={name} width={1920} height={1228} />
+                <Image
+                  className="rounded-lg transition-opacity hover:opacity-75"
+                  src={img}
+                  alt={name}
+                  width={1920}
+                  height={1228}
+                />
               </Link>
 
               <div className="flex flex-col">
@@ -127,19 +135,7 @@ const Page: React.FC = () => (
 
       <section className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Filmográfia</h2>
-        <div className="grid gap-4 md:grid-cols-3">
-          {movies.map(({ img, imdb, title, year }) => (
-            <div className="flex flex-col gap-3" key={imdb}>
-              <Link href={imdb} target="_blank" rel="noopener noreferrer">
-                <Image className="rounded-lg" src={img} alt={title} width={1280} height={720} />
-              </Link>
-
-              <span className="text-lg font-semibold">
-                {title} ({year})
-              </span>
-            </div>
-          ))}
-        </div>
+        <Movies movies={movies} />
       </section>
 
       <section className="flex w-full flex-col gap-2">
@@ -149,18 +145,18 @@ const Page: React.FC = () => (
           <li>
             Creed:{' '}
             <Anchor href="https://hu.wikipedia.org/wiki/Creed:_Apollo_fia" target="_blank">
-              Wikipedia
+              Wikipédia
             </Anchor>
           </li>
           <li>
             Ryan Coogler:{' '}
             <Anchor href="https://hu.wikipedia.org/wiki/Ryan_Coogler" target="_blank">
-              Wikipedia
+              Wikipédia
             </Anchor>
           </li>
           <li>
             <Anchor href="https://imdb.com" target="_blank">
-              IMDB
+              IMDb
             </Anchor>
           </li>
         </ul>

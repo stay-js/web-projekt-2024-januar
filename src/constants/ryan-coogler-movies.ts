@@ -1,4 +1,6 @@
-export const ryanCooglerMovies = [
+import type { Movie } from '~/components/movies';
+
+export const ryanCooglerMovies: Movie[] = [
   {
     img: '/a-megallo.jpg',
     imdb: 'https://www.imdb.com/title/tt2334649',
@@ -47,4 +49,4 @@ export const ryanCooglerMovies = [
     title: 'Creed III.',
     year: 2023,
   },
-] as const;
+];

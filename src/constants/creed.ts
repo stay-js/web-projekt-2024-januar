@@ -1,4 +1,6 @@
-export const movies = [
+import type { Movie } from '~/components/movies';
+
+export const movies: Movie[] = [
   {
     img: '/creed.jpg',
     imdb: 'https://www.imdb.com/title/tt3076658',
@@ -17,7 +19,7 @@ export const movies = [
     title: 'Creed III.',
     year: 2023,
   },
-] as const;
+];
 
 export const cast = [
   {
