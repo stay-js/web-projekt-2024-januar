@@ -17,7 +17,7 @@ const Page: React.FC = () => (
       <h1 className="text-center text-3xl font-bold md:text-5xl">Ryan Coogler</h1>
     </header>
 
-    <article className="content">
+    <article className="container mx-auto flex max-w-6xl flex-col items-center gap-12 px-6 pb-24 pt-12">
       <section className="flex flex-col gap-3">
         <h2 className="text-2xl font-bold md:text-3xl">Élete</h2>
 

@@ -29,7 +29,7 @@ export const Navigation: React.FC = () => {
   return (
     <nav className="flex w-full select-none items-center justify-between px-6 py-4">
       <Link href="/" className="text-2xl font-bold">
-        Creed
+        Web Projekt
       </Link>
 
       <button
