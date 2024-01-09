@@ -14,16 +14,16 @@ export const metadata = createMetadata({
 const Page: React.FC = () => (
   <main>
     <header className="bg-neutral-100 px-6 py-16">
-      <h1 className="text-center text-5xl font-bold">Ryan Coogler</h1>
+      <h1 className="text-center text-3xl font-bold md:text-5xl">Ryan Coogler</h1>
     </header>
 
     <article className="content">
       <section className="flex flex-col gap-3">
-        <h2 className="text-3xl font-bold">Élete</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">Élete</h2>
 
-        <div className="grid gap-6 md:grid-cols-[1fr_4fr]">
+        <div className="grid gap-6 lg:grid-cols-[1fr_4fr]">
           <Image
-            className="rounded-lg"
+            className="mx-auto w-full rounded-lg sm:w-1/2 lg:w-full"
             src="/ryan-coogler.jpg"
             alt="Ryan Coogler"
             width={791}
@@ -99,7 +99,7 @@ const Page: React.FC = () => (
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-3xl font-bold">Filmei</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">Filmei</h2>
         <List items={movies} />
       </section>
     </article>

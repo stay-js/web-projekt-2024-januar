@@ -12,13 +12,13 @@ export const metadata = createMetadata({
 
 const Page: React.FC = () => (
   <main>
-    <header className="grid min-h-96 place-content-center overflow-hidden bg-[url(/banner.jpg)] bg-cover bg-center bg-no-repeat px-6">
-      <h1 className="text-center text-6xl font-bold text-white">Creed: Apollo Fia</h1>
+    <header className="bg-neutral-100 px-6 py-16">
+      <h1 className="text-center text-3xl font-bold md:text-5xl">Creed: Apollo Fia</h1>
     </header>
 
     <article className="content">
       <section className="flex flex-col gap-3">
-        <h2 className="text-3xl font-bold">A filmről</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">A filmről</h2>
         <div className="grid gap-6 lg:grid-cols-[3fr_2fr]">
           <div className="flex flex-col gap-2 text-justify">
             <p>
@@ -107,17 +107,17 @@ const Page: React.FC = () => (
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-3xl font-bold">Szereplők</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">Szereplők</h2>
         <List items={cast} />
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-3xl font-bold">Filmográfia</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">Filmográfia</h2>
         <List items={movies} />
       </section>
 
       <section className="flex w-full flex-col gap-2">
-        <h2 className="text-2xl font-bold">Források</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">Források</h2>
 
         <ul className="list-inside list-disc pl-2">
           <li>
