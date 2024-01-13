@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { Anchor } from '~/components/anchor';
 import { Chip } from '~/components/chip';
-import { List } from '~/components/list';
 import { Expendable } from '~/components/expendable';
+import { List } from '~/components/list';
+import { ListWithSeparator } from '~/components/list-with-separator';
 import { cast, movies } from '~/constants/creed';
 import { createMetadata } from '~/utils/create-metadata';
 
@@ -12,10 +13,6 @@ export const metadata = createMetadata({
   description:
     'A Creed: Apollo fia 2015-ös amerikai sport-dráma, melyet Ryan Coogler rendezett, illetve a forgatókönyvét is ő írta, Aaron Covingtonnal közösen. A Rocky-sorozat folytatásaként és spin-off-jaként elkészült film szereplője Michael B. Jordan, Sylvester Stallone, Tessa Thompson, Phylicia Rashad, Tony Bellew, és Graham McTavish.',
 });
-
-const Separator: React.FC = () => (
-  <div className="hidden h-1 w-1 rounded-full bg-neutral-200 md:block" />
-);
 
 const Page: React.FC = () => (
   <main>
@@ -27,14 +24,12 @@ const Page: React.FC = () => (
           <div className="flex flex-col justify-between gap-4 md:flex-row">
             <ul className="flex items-center gap-3">
               <li>2015</li>
-
-              <div className="h-1 w-1 rounded-full bg-neutral-200" />
-
-              <li>13+</li>
-
-              <div className="h-1 w-1 rounded-full bg-neutral-200" />
-
-              <li>2 óra 13 perc</li>
+              <li className="flex items-center gap-3 before:h-1 before:w-1 before:rounded-full before:bg-neutral-200">
+                13+
+              </li>
+              <li className="flex items-center gap-3 before:h-1 before:w-1 before:rounded-full before:bg-neutral-200">
+                2 óra 13 perc
+              </li>
             </ul>
 
             <div className="flex gap-2">
@@ -85,31 +80,24 @@ const Page: React.FC = () => (
           <div className="flex flex-col gap-x-6 gap-y-2 text-lg md:flex-row">
             <span className="font-bold">Forgatókönyvírók:</span>
 
-            <div className="flex flex-col gap-x-3 md:flex-row md:items-center">
-              <Anchor href="/ryan-coogler" className="text-cyan-500">
-                Ryan Coogler
-              </Anchor>
-
-              <Separator />
-
-              <Anchor
-                href="https://www.imdb.com/name/nm2128400"
-                target="_blank"
-                className="text-cyan-500"
-              >
-                Aaron Covington
-              </Anchor>
-
-              <Separator />
-
-              <Anchor
-                href="https://www.imdb.com/name/nm0000230"
-                target="_blank"
-                className="text-cyan-500"
-              >
-                Sylvester Stallone
-              </Anchor>
-            </div>
+            <ListWithSeparator
+              items={[
+                {
+                  href: '/ryan-coogler',
+                  text: 'Ryan Coogler',
+                },
+                {
+                  href: 'https://www.imdb.com/name/nm2128400',
+                  text: 'Aaron Covington',
+                  target: '_blank',
+                },
+                {
+                  href: 'https://www.imdb.com/name/nm0000230',
+                  text: 'Sylvester Stallone',
+                  target: '_blank',
+                },
+              ]}
+            />
           </div>
         </div>
 
@@ -118,35 +106,25 @@ const Page: React.FC = () => (
         <div className="flex flex-col gap-x-6 gap-y-2 text-lg md:flex-row">
           <span className="font-bold">Főszereplők:</span>
 
-          <div className="flex flex-col gap-x-3 md:flex-row md:items-center">
-            <Anchor
-              href="https://www.imdb.com/name/nm0430107"
-              target="_blank"
-              className="text-cyan-500"
-            >
-              Michael B. Jordan
-            </Anchor>
-
-            <Separator />
-
-            <Anchor
-              href="https://www.imdb.com/name/nm0000230"
-              target="_blank"
-              className="text-cyan-500"
-            >
-              Sylvester Stallone
-            </Anchor>
-
-            <Separator />
-
-            <Anchor
-              href="https://www.imdb.com/name/nm1935086"
-              target="_blank"
-              className="text-cyan-500"
-            >
-              Tessa Thompson
-            </Anchor>
-          </div>
+          <ListWithSeparator
+            items={[
+              {
+                href: 'https://www.imdb.com/name/nm0430107',
+                text: 'Michael B. Jordan',
+                target: '_blank',
+              },
+              {
+                href: 'https://www.imdb.com/name/nm0000230',
+                text: 'Sylvester Stallone',
+                target: '_blank',
+              },
+              {
+                href: 'https://www.imdb.com/name/nm1935086',
+                text: 'Tessa Thompson',
+                target: '_blank',
+              },
+            ]}
+          />
         </div>
       </div>
     </header>
@@ -154,7 +132,85 @@ const Page: React.FC = () => (
     <article className="container mx-auto flex max-w-6xl flex-col items-center gap-12 px-6 pb-24 pt-12">
       <section className="flex flex-col gap-3">
         <h2 className="text-2xl font-bold md:text-3xl">A filmről</h2>
-        <Expendable />
+
+        <Expendable
+          alwaysVisible={
+            <p>
+              A <b>Creed: Apollo fia</b> (eredeti cím: <i>Creed</i>) 2015-ös amerikai sport-dráma,
+              melyet <Anchor href="/ryan-coogler">Ryan Coogler</Anchor> rendezett, illetve a
+              forgatókönyvét is ő írta, Aaron Covingtonnal közösen. A{' '}
+              <Anchor href="https://www.imdb.com/list/ls020255449" target="_blank">
+                Rocky-sorozat
+              </Anchor>{' '}
+              folytatásaként és spin-off-jaként elkészült film szereplője{' '}
+              <Anchor href="https://www.imdb.com/name/nm0430107" target="_blank">
+                Michael B. Jordan
+              </Anchor>
+              ,{' '}
+              <Anchor href="https://www.imdb.com/name/nm0000230" target="_blank">
+                Sylvester Stallone
+              </Anchor>
+              ,{' '}
+              <Anchor href="https://www.imdb.com/name/nm1935086" target="_blank">
+                Tessa Thompson
+              </Anchor>
+              ,{' '}
+              <Anchor href="https://www.imdb.com/name/nm0711118" target="_blank">
+                Phylicia Rashad
+              </Anchor>
+              ,{' '}
+              <Anchor href="https://www.imdb.com/name/nm6905689" target="_blank">
+                Tony Bellew
+              </Anchor>
+              , és{' '}
+              <Anchor href="https://www.imdb.com/name/nm0574615" target="_blank">
+                Graham McTavish
+              </Anchor>
+              .
+            </p>
+          }
+        >
+          <p>
+            A Creed forgatása <b>2015. január 19</b>-én kezdődött <b>Liverpoolban</b>, majd{' '}
+            <b>Philadelphiában</b>, Rocky Balboa szülővárosában folytatódott.
+          </p>
+          <p>
+            Az Amerikai Egyesült Államokban 2015. november 25-én mutatták be (az 1976-os Rocky-film
+            nyitójelenetének negyvenedik évfordulóján), Magyarországon 2016. január 21-én került a
+            mozikba, a Fórum Hungary forgalmazásában.
+          </p>
+          <p>
+            A Rocky-sorozat hetedik részeként és a{' '}
+            <Anchor href="https://www.imdb.com/title/tt0479143" target="_blank">
+              Rocky Balboa
+            </Anchor>{' '}
+            folytatásaként a Creed pozitív értékeléseket kapott a kritikusoktól, akik a sorozat
+            egyik legjobb részének tartották a filmet. Alakításáért Stallone{' '}
+            <Anchor href="https://hu.wikipedia.org/wiki/Oscar-d%C3%ADj" target="_blank">
+              Oscar-díj
+            </Anchor>{' '}
+            <b>jelölést kapott</b>, mint{' '}
+            <Anchor
+              href="https://hu.wikipedia.org/wiki/Oscar-d%C3%ADj_a_legjobb_f%C3%A9rfi_mell%C3%A9kszerepl%C5%91nek"
+              target="_blank"
+            >
+              legjobb férfi mellékszereplő
+            </Anchor>{' '}
+            (az első Rocky-film óta először jelölték a színészt Oscarra), valamint számos egyéb
+            díjat és jelölést is elnyert, köztük a{' '}
+            <Anchor
+              href="https://hu.wikipedia.org/wiki/Oscar-d%C3%ADj_a_legjobb_f%C3%A9rfi_mell%C3%A9kszerepl%C5%91nek"
+              target="_blank"
+            >
+              legjobb férfi mellékszereplőnek
+            </Anchor>{' '}
+            járó{' '}
+            <Anchor href="https://hu.wikipedia.org/wiki/Golden_Globe-d%C3%ADj" target="_blank">
+              Golden Globe
+            </Anchor>
+            -díjat.
+          </p>
+        </Expendable>
       </section>
 
       <section className="flex flex-col gap-3">

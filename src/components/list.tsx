@@ -18,7 +18,7 @@ export type Movie = {
 export const List: React.FC<{ items: Cast[] | Movie[] }> = ({ items }) => (
   <div className="grid gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
     {items.map((item) => {
-      const isMovie = 'title' in item && 'year' in item;
+      const isMovie = 'title' in item;
 
       return (
         <div className="flex flex-col gap-3" key={item.imdb}>
