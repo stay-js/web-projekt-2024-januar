@@ -7,7 +7,7 @@ import { cn } from '~/utils/cn';
 import { navItems } from '~/constants/nav-items';
 
 export const Navigation: React.FC = () => {
-  const [isToggled, setIsToggled] = useState<boolean>(false);
+  const [isToggled, setIsToggled] = useState(false);
 
   const pathname = usePathname();
 

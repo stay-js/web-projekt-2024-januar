@@ -1,9 +1,7 @@
 import type { MetadataRoute } from 'next';
 
-const routes = ['', '/ryan-coogler'];
-
 const sitemap = (): MetadataRoute.Sitemap => {
-  return routes.map((route) => ({
+  return ['', '/ryan-coogler'].map((route) => ({
     url: `https://web-januar.znagy.hu${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }));

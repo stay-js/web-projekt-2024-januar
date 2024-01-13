@@ -96,7 +96,7 @@ const Page: React.FC = () => (
           </div>
 
           <div className="flex h-fit flex-col border">
-            <span className=" p-4 text-center text-lg font-bold">Ryan Coogler</span>
+            <span className="p-4 text-center text-lg font-bold">Ryan Coogler</span>
 
             <Image
               className="mx-auto w-full sm:w-3/5 lg:w-full"

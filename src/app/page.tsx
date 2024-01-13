@@ -70,9 +70,15 @@ const Page: React.FC = () => (
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-x-6 gap-y-2 text-lg md:flex-row">
             <span className="font-bold">Rendező:</span>
-            <Anchor href="/ryan-coogler" className="text-cyan-500">
-              Ryan Coogler
-            </Anchor>
+
+            <ListWithSeparator
+              items={[
+                {
+                  href: '/ryan-coogler',
+                  text: 'Ryan Coogler',
+                },
+              ]}
+            />
           </div>
 
           <hr className="border-gray-600" />
